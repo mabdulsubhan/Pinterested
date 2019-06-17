@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0D0564FE22B7B4E1001032D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0564FD22B7B4E1001032D8 /* AppDelegate.swift */; };
-		0D05650022B7B4E1001032D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0564FF22B7B4E1001032D8 /* ViewController.swift */; };
-		0D05650322B7B4E1001032D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D05650122B7B4E1001032D8 /* Main.storyboard */; };
 		0D05650522B7B4E2001032D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D05650422B7B4E2001032D8 /* Assets.xcassets */; };
 		0D05650822B7B4E2001032D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D05650622B7B4E2001032D8 /* LaunchScreen.storyboard */; };
 		0D05651322B7B4E2001032D8 /* PinterestedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05651222B7B4E2001032D8 /* PinterestedTests.swift */; };
 		0D05651E22B7B4E2001032D8 /* PinterestedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05651D22B7B4E2001032D8 /* PinterestedUITests.swift */; };
+		232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC05323195D599DB634710D /* Pods_Pinterested.framework */; };
+		29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */; };
+		3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0557CD208D6E167692D88A10 /* Pods-PinterestedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestedTests/Pods-PinterestedTests.release.xcconfig"; sourceTree = "<group>"; };
+		0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0564FA22B7B4E1001032D8 /* Pinterested.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterested.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0564FD22B7B4E1001032D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D0564FF22B7B4E1001032D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D05650222B7B4E1001032D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D05650422B7B4E2001032D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D05650722B7B4E2001032D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D05650922B7B4E2001032D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,14 @@
 		0D05651922B7B4E2001032D8 /* PinterestedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinterestedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D05651D22B7B4E2001032D8 /* PinterestedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestedUITests.swift; sourceTree = "<group>"; };
 		0D05651F22B7B4E2001032D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D05652B22B7BCB2001032D8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.debug.xcconfig"; sourceTree = "<group>"; };
+		1EC05323195D599DB634710D /* Pods_Pinterested.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterested.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.release.xcconfig"; sourceTree = "<group>"; };
+		2862256E1C1C6029CBA2CC8F /* Pods-PinterestedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestedUITests/Pods-PinterestedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742C61B912F9B66388321938 /* Pods-PinterestedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestedUITests/Pods-PinterestedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E08CF40DE3F7BC7DFFA3CBEB /* Pods-PinterestedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestedTests/Pods-PinterestedTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +89,13 @@
 		0D0564F122B7B4E1001032D8 = {
 			isa = PBXGroup;
 			children = (
+				0D05652B22B7BCB2001032D8 /* README.md */,
 				0D0564FC22B7B4E1001032D8 /* Pinterested */,
 				0D05651122B7B4E2001032D8 /* PinterestedTests */,
 				0D05651C22B7B4E2001032D8 /* PinterestedUITests */,
 				0D0564FB22B7B4E1001032D8 /* Products */,
+				46CD9DDDFA2998BF17DE95A3 /* Pods */,
+				B246FF82A93B4A138F41D6A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				0D0564FD22B7B4E1001032D8 /* AppDelegate.swift */,
-				0D0564FF22B7B4E1001032D8 /* ViewController.swift */,
-				0D05650122B7B4E1001032D8 /* Main.storyboard */,
 				0D05650422B7B4E2001032D8 /* Assets.xcassets */,
 				0D05650622B7B4E2001032D8 /* LaunchScreen.storyboard */,
 				0D05650922B7B4E2001032D8 /* Info.plist */,
@@ -125,6 +138,29 @@
 			path = PinterestedUITests;
 			sourceTree = "<group>";
 		};
+		46CD9DDDFA2998BF17DE95A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */,
+				24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */,
+				E08CF40DE3F7BC7DFFA3CBEB /* Pods-PinterestedTests.debug.xcconfig */,
+				0557CD208D6E167692D88A10 /* Pods-PinterestedTests.release.xcconfig */,
+				742C61B912F9B66388321938 /* Pods-PinterestedUITests.debug.xcconfig */,
+				2862256E1C1C6029CBA2CC8F /* Pods-PinterestedUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B246FF82A93B4A138F41D6A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EC05323195D599DB634710D /* Pods_Pinterested.framework */,
+				3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */,
+				0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D05652222B7B4E2001032D8 /* Build configuration list for PBXNativeTarget "Pinterested" */;
 			buildPhases = (
+				66421AC5038766DDD2F9DF0C /* [CP] Check Pods Manifest.lock */,
 				0D0564F622B7B4E1001032D8 /* Sources */,
 				0D0564F722B7B4E1001032D8 /* Frameworks */,
 				0D0564F822B7B4E1001032D8 /* Resources */,
@@ -149,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D05652522B7B4E2001032D8 /* Build configuration list for PBXNativeTarget "PinterestedTests" */;
 			buildPhases = (
+				91FDE3EE204CB49C356063F1 /* [CP] Check Pods Manifest.lock */,
 				0D05650A22B7B4E2001032D8 /* Sources */,
 				0D05650B22B7B4E2001032D8 /* Frameworks */,
 				0D05650C22B7B4E2001032D8 /* Resources */,
@@ -167,6 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D05652822B7B4E2001032D8 /* Build configuration list for PBXNativeTarget "PinterestedUITests" */;
 			buildPhases = (
+				9CB8EE88378BEA9C4C33D17C /* [CP] Check Pods Manifest.lock */,
 				0D05651522B7B4E2001032D8 /* Sources */,
 				0D05651622B7B4E2001032D8 /* Frameworks */,
 				0D05651722B7B4E2001032D8 /* Resources */,
@@ -231,7 +270,6 @@
 			files = (
 				0D05650822B7B4E2001032D8 /* LaunchScreen.storyboard in Resources */,
 				0D05650522B7B4E2001032D8 /* Assets.xcassets in Resources */,
-				0D05650322B7B4E1001032D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +289,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66421AC5038766DDD2F9DF0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pinterested-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91FDE3EE204CB49C356063F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinterestedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CB8EE88378BEA9C4C33D17C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinterestedUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D0564F622B7B4E1001032D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D05650022B7B4E1001032D8 /* ViewController.swift in Sources */,
 				0D0564FE22B7B4E1001032D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +399,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0D05650122B7B4E1001032D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D05650222B7B4E1001032D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D05650622B7B4E2001032D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,40 +528,45 @@
 		};
 		0D05652322B7B4E2001032D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Pinterested/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhan.Pinterested;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0D05652422B7B4E2001032D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Pinterested/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhan.Pinterested;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		0D05652622B7B4E2001032D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E08CF40DE3F7BC7DFFA3CBEB /* Pods-PinterestedTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +587,7 @@
 		};
 		0D05652722B7B4E2001032D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0557CD208D6E167692D88A10 /* Pods-PinterestedTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +608,7 @@
 		};
 		0D05652922B7B4E2001032D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742C61B912F9B66388321938 /* Pods-PinterestedUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +628,7 @@
 		};
 		0D05652A22B7B4E2001032D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2862256E1C1C6029CBA2CC8F /* Pods-PinterestedUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

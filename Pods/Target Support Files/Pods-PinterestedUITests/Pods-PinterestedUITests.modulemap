@@ -1,0 +1,6 @@
+framework module Pods_PinterestedUITests {
+  umbrella header "Pods-PinterestedUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
