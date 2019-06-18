@@ -18,14 +18,14 @@ protocol PinboardDataProviderDelegate: class {
 
 
 /// PinboardDataProvider Protocol
-protocol PinboardDataProvider {
+protocol PinboardDataProviderProtocol {
 
     func providePins()
     var delegate: PinboardDataProviderDelegate? { get set }
 }
 
 /// PinboardDataProvider Protocol Implementation
-class PinboardDataProviderImpl: PinboardDataProvider {
+class PinboardDataProvider: PinboardDataProviderProtocol {
     
     /// Injected Properties
     var pinboardService: PinboardService!

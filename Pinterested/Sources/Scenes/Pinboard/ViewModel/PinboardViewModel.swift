@@ -83,7 +83,7 @@ final class PinboardViewModel: PinboardViewModelProtocol {
         let ratio = originalHeight/originalWidth
         let newWidth = UIScreen.main.bounds.maxX/2
         let newHeight = newWidth * ratio
-        return newHeight
+        return newHeight * 2.5
     }
     
     func getPins() {

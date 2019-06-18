@@ -6,10 +6,9 @@
 //  Copyright © 2019 Subhan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// PinboardViewModel
-
 struct PinboardTableCellViewModel {
     
      /// Properties
@@ -17,6 +16,10 @@ struct PinboardTableCellViewModel {
     var thumbImageURL: URL?
     var imageWidth: Int
     var imageHeight: Int
+    var username: String
+    var time: String
+    var color: UIColor
+    var pinIdentifier: String
     
     init(_ pin: Pin) {
         
@@ -24,10 +27,11 @@ struct PinboardTableCellViewModel {
         self.pin = pin
         self.imageWidth = pin.width
         self.imageHeight = pin.height
-        self.thumbImageURL = URL(string: pin.urls.raw + "?w=600")//APIConstants.ImageBaseURL + APIConstants.ImagePreviewSize + (pin?.identifier ?? "")
-        
-//        let date = DateTimeUtility.getReleaseDateFromString(dateString: pin?.identifier ?? "")
-//        self.movieReleaseDate = DateTimeUtility.convertToLongDateFormat(from: date) ?? ""
+        self.thumbImageURL = URL(string: pin.urls.raw + "?w=1200")
+        self.username = "@" + pin.user.username
+        self.time = pin.creationDate.getElapsedInterval()
+        self.color = pin.color
+        self.pinIdentifier = pin.identifier
     }
     
 }

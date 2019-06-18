@@ -10,6 +10,7 @@ import UIKit
 
 enum SceneType {
     case Pinboard
+    case PinDetail
 }
 
 class SceneFactory {
@@ -24,8 +25,8 @@ class SceneFactory {
         switch sceneType {
         case .Pinboard:
             return getPinboardScene()
-//        case .PinDetail:
-//            return getPinDetailsScene(withPin: pin)
+        case .PinDetail:
+            return getPinDetailsScene(withPin: pin)
         }
     }
 
@@ -37,9 +38,9 @@ class SceneFactory {
         let storyboard = UIStoryboard(name: UIStoryboard.Name.Pinboard.rawValue, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: UIViewController.Name.Pinboard.rawValue) as! PinboardViewController
         
-        let dataProvider = PinboardDataProviderImpl()
-        dataProvider.pinboardService = PinboardServiceImpl()
-        let coordinator = PinboardCoordinatorImpl(view: viewController)
+        let dataProvider = PinboardDataProvider()
+        dataProvider.pinboardService = PinboardService()
+        let coordinator = PinboardCoordinator(view: viewController)
         
         let viewModel = PinboardViewModel(withDataProvider: dataProvider, andCoordinator: coordinator)
         
@@ -52,7 +53,6 @@ class SceneFactory {
     /// Builds PinDetailViewController and binds coordinator, data provider and viewmodels with it.
     ///
     /// - Returns: PinDetailViewController
-    /*
     private func getPinDetailsScene(withPin pin: Pin?) -> PinDetailViewController {
         
         let storyboard = UIStoryboard(name: UIStoryboard.Name.PinDetail.rawValue, bundle: Bundle.main)
@@ -62,5 +62,4 @@ class SceneFactory {
         
         return viewController
     }
-     */
 }

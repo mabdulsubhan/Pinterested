@@ -14,7 +14,6 @@ class PinboardViewController: UIViewController {
     
     /// Outlets
     @IBOutlet weak var pinboardCollectionView: UICollectionView!
-    @IBOutlet var noDataView: UIView!
     
     var datePickerTopConstraint = NSLayoutConstraint()
     var viewModel: PinboardViewModelProtocol!
@@ -30,8 +29,8 @@ class PinboardViewController: UIViewController {
   
     /// Methods
     private func setupUI() {
+        view.backgroundColor = UIColor.primaryColor
         pinboardCollectionView.register(cellType: PinboardCollectionViewCell.self)
-        pinboardCollectionView.backgroundView = noDataView
         if let layout = pinboardCollectionView?.collectionViewLayout as? PinterestedCollectionViewLayout {
             layout.delegate = self
         }

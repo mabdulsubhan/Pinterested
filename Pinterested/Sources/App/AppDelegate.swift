@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,10 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// Setting Navigation Bar UI
     private func setNavBarUI() {
-        UINavigationBar.appearance().barTintColor = UIColor.white
-        UINavigationBar.appearance().tintColor = UIColor.black
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        UINavigationBar.appearance().barStyle = .default
+        UINavigationBar.appearance().barTintColor = UIColor.primaryColor
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
     
     /// Navigation handler for startup
@@ -34,7 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let pinboardScene = SceneFactory.shared().getScene(sceneType: .Pinboard)
-        window?.rootViewController = UINavigationController(rootViewController: pinboardScene)
+        let navController = UINavigationController(rootViewController: pinboardScene)
+        navController.hero.isEnabled = true
+        window?.rootViewController = navController
     }
     
 }

@@ -12,12 +12,12 @@ import Foundation
 typealias PinResponse = (Result<[Pin],NetworkError>) -> Void
 
 /// Pinboard Service  Protocol
-protocol PinboardService {
+protocol PinboardServiceProtocol {
     func fetchPins(withCompletion: @escaping (PinResponse) )
 }
 
 /// Pinboard Service  Protocol Implementation
-class PinboardServiceImpl: PinboardService {
+class PinboardService: PinboardServiceProtocol {
         
     /// Properties
     let translationLayer: TranslationLayer

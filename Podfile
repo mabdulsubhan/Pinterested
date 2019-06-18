@@ -3,6 +3,7 @@ target 'Pinterested' do
 
   pod 'Kingfisher', '~> 5.0'
   pod 'SVProgressHUD'
+  pod 'Hero'
 
   target 'PinterestedTests' do
     inherit! :search_paths

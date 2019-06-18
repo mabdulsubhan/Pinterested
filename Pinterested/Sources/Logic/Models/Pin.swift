@@ -6,7 +6,7 @@
 //  Copyright © 2019 Subhan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Pin: Codable {
     
@@ -14,7 +14,7 @@ struct Pin: Codable {
     let creationDate: Date
     let width: Int
     let height: Int
-    let color: String
+    let colorString: String
     let likes: Int
     let isLikedByUser: Bool
     let user: User
@@ -22,11 +22,18 @@ struct Pin: Codable {
     let categories: [Categories]
     let links: Links
     
+    var color: UIColor {
+        get {
+            return UIColor.init(hex: colorString)
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case creationDate = "created_at"
         case isLikedByUser = "liked_by_user"
-        case width, height, color, likes, user, urls, categories, links
+        case colorString = "color"
+        case width, height, likes, user, urls, categories, links
     }
     
     struct URLS: Codable {

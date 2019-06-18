@@ -12,6 +12,7 @@ extension UIStoryboard {
     
     enum Name: String {
         case Pinboard = "Pinboard"
+        case PinDetail = "PinDetail"
     }
 }
 

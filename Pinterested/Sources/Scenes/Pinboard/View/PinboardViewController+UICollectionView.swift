@@ -41,7 +41,7 @@ extension PinboardViewController : UIScrollViewDelegate {
         
         if scrollView.isAtBottom() {
             // TODO
-            viewModel.reload()
+//            viewModel.reload()
         }
     }
 }

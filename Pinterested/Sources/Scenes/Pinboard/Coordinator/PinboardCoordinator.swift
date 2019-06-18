@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 /// Pinboard coordinator protocol
-protocol PinboardCoordinator {
+protocol PinboardCoordinatorProtocol {
     func navigateToPinDetail(withPin pin: Pin?)
 }
 
 /// Protocol implementation of pinboard coordinator
-class PinboardCoordinatorImpl: PinboardCoordinator {
+class PinboardCoordinator: PinboardCoordinatorProtocol {
     weak var view: UIViewController?
     
     init(view: UIViewController?) {
@@ -23,11 +23,11 @@ class PinboardCoordinatorImpl: PinboardCoordinator {
     }
 }
 
-extension PinboardCoordinatorImpl {
+extension PinboardCoordinator {
     
     func navigateToPinDetail(withPin pin: Pin?) {
-        //TODO
-//        let detailController = SceneFactory.shared().getScene(sceneType: .PinDetail, withPin: pin)
-//        view?.navigationController?.pushViewController(detailController, animated: true)
+        let detailController = SceneFactory.shared().getScene(sceneType: .PinDetail, withPin: pin)
+        view?.present(detailController, animated: true)
+        // view?.navigationController?.pushViewController(detailController, animated: true)
     }
 }

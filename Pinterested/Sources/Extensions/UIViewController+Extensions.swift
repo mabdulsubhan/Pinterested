@@ -12,5 +12,6 @@ extension UIViewController {
     
     enum Name: String {
         case Pinboard = "PinboardViewController"
+        case PinDetail = "PinDetailViewController"
     }
 }
