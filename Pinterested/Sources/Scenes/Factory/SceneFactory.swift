@@ -20,12 +20,12 @@ class SceneFactory {
         return sharedSceneFactory
     }
     
-    func getScene(sceneType: SceneType, withPin pin: Movie? = nil) -> UIViewController {
+    func getScene(sceneType: SceneType, withPin pin: Pin? = nil) -> UIViewController {
         switch sceneType {
         case .Pinboard:
             return getPinboardScene()
-//        case .MovieDetail:
-//            return getMovieDetailsScene(withMovie: movie)
+//        case .PinDetail:
+//            return getPinDetailsScene(withPin: pin)
         }
     }
 
@@ -49,15 +49,15 @@ class SceneFactory {
         return viewController
     }
 
-    /// Builds MovieDetailViewController and binds coordinator, data provider and viewmodels with it.
+    /// Builds PinDetailViewController and binds coordinator, data provider and viewmodels with it.
     ///
-    /// - Returns: MovieDetailViewController
+    /// - Returns: PinDetailViewController
     /*
-    private func getMovieDetailsScene(withMovie movie: Movie?) -> MovieDetailViewController {
+    private func getPinDetailsScene(withPin pin: Pin?) -> PinDetailViewController {
         
-        let storyboard = UIStoryboard(name: UIStoryboard.Name.moviesDetails.rawValue, bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: UIViewController.Name.moviesDetails.rawValue) as! MovieDetailViewController
-        let viewModel = MovieDetailViewModel(movie)
+        let storyboard = UIStoryboard(name: UIStoryboard.Name.PinDetail.rawValue, bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: UIViewController.Name.PinDetail.rawValue) as! PinDetailViewController
+        let viewModel = PinDetailViewModel(pin)
         viewController.viewModel = viewModel
         
         return viewController

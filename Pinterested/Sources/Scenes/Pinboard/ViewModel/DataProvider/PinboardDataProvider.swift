@@ -11,7 +11,7 @@ import Foundation
 /// Delegates Protocol
 protocol PinboardDataProviderDelegate: class {
     
-    func onSuccess(_ upcomingMovies: UpcomingMovies)
+    func onSuccess(_ pinArray: [Pin])
     func onFailure(_ error: NetworkError)
     func showLoader(show: Bool)
 }
@@ -20,7 +20,7 @@ protocol PinboardDataProviderDelegate: class {
 /// PinboardDataProvider Protocol
 protocol PinboardDataProvider {
 
-    func providePaginatedUpcomingMovies()
+    func providePins()
     var delegate: PinboardDataProviderDelegate? { get set }
 }
 
@@ -31,21 +31,19 @@ class PinboardDataProviderImpl: PinboardDataProvider {
     var pinboardService: PinboardService!
     
     /// Private Properties
-    private var pageCount = 1
-    private var totalPages: Int = 1
     private var isFetching = false
     
     /// Computed Properties
     weak var delegate: PinboardDataProviderDelegate?
     
     /// Methods
-    func providePaginatedUpcomingMovies() {
+    func providePins() {
         
-        if pageCount <= totalPages && isFetching == false {
+        if isFetching == false {
 
             isFetching = true
             delegate?.showLoader(show: isFetching)
-            pinboardService.fetchMovies(forPage: pageCount) { [weak self] (result) in
+            pinboardService.fetchPins() { [weak self] (result) in
                 
                 guard let self = self else { return }
         
@@ -54,10 +52,8 @@ class PinboardDataProviderImpl: PinboardDataProvider {
                 
                 switch result {
                     
-                case .success(let upcomingMovies):
-                    self.pageCount = upcomingMovies.page + 1
-                    self.totalPages = upcomingMovies.totalPages 
-                    self.delegate?.onSuccess(upcomingMovies)
+                case .success(let pinArray):
+                    self.delegate?.onSuccess(pinArray)
                     
                 case .failure(let error):
                     self.delegate?.onFailure(error)

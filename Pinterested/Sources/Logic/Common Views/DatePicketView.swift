@@ -22,8 +22,8 @@ class DatePickerView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        datePicker.setValue(UIColor.white, forKey: "textColor")
-        datePicker.backgroundColor = UIColor.black
+        datePicker.setValue(UIColor.black, forKey: "textColor")
+        datePicker.backgroundColor = UIColor.white
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {

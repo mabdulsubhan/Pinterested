@@ -11,10 +11,10 @@ import UIKit
 
 /// Pinboard coordinator protocol
 protocol PinboardCoordinator {
-    func navigateToMovieDetail(withMovie movie: Movie?)
+    func navigateToPinDetail(withPin pin: Pin?)
 }
 
-/// Protocol implementation of movies list coordinator
+/// Protocol implementation of pinboard coordinator
 class PinboardCoordinatorImpl: PinboardCoordinator {
     weak var view: UIViewController?
     
@@ -25,8 +25,9 @@ class PinboardCoordinatorImpl: PinboardCoordinator {
 
 extension PinboardCoordinatorImpl {
     
-    func navigateToMovieDetail(withMovie movie: Movie?) {
-//        let detailController = SceneFactory.shared().getScene(sceneType: .MovieDetail, withMovie: movie)
+    func navigateToPinDetail(withPin pin: Pin?) {
+        //TODO
+//        let detailController = SceneFactory.shared().getScene(sceneType: .PinDetail, withPin: pin)
 //        view?.navigationController?.pushViewController(detailController, animated: true)
     }
 }

@@ -17,7 +17,8 @@ protocol TranslationLayer {
 class JSONTranslation: TranslationLayer {
     
     func translateToObject<T: Decodable>(withData data: Data) throws -> T {
-            let decoder = JSONDecoder()
-            return try decoder.decode(T.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return try decoder.decode(T.self, from: data)
     }
 }

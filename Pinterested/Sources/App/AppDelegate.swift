@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// Setting Navigation Bar UI
     private func setNavBarUI() {
-        UINavigationBar.appearance().barTintColor = UIColor.black
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
         UINavigationBar.appearance().isTranslucent = false
     }
     
@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func navigateToRootVC() {
         window = UIWindow()
         window?.makeKeyAndVisible()
-        let moviesListScene = SceneFactory.shared().getScene(sceneType: .Pinboard)
-        window?.rootViewController = UINavigationController(rootViewController: moviesListScene)
+        let pinboardScene = SceneFactory.shared().getScene(sceneType: .Pinboard)
+        window?.rootViewController = UINavigationController(rootViewController: pinboardScene)
     }
     
 }

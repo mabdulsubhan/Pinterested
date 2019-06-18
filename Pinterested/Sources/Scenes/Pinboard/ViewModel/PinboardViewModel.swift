@@ -15,7 +15,7 @@ protocol PinboardViewModelProtocol {
 
     var dataProvider: PinboardDataProvider! { get }
     var coordinator: PinboardCoordinator! { get }
-    var numberOfMovies: Int { get }
+    var numberOfPins: Int { get }
     var output: PinboardViewModelOutput? { get set }
     func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel
     func didSelectPin(index : Int)
@@ -26,12 +26,12 @@ protocol PinboardViewModelProtocol {
     func performCTA()
 }
 
-/// MovieListViewModel Implementation
+/// PinboardViewModel Implementation
 final class PinboardViewModel: PinboardViewModelProtocol {
     
     /// View Output Bindings
     enum Output {
-        case reloadMovies
+        case reloadPins
         case showActivityIndicator(show: Bool)
         case showDatePicker(show: Bool)
         case showFilterImage(show: Bool)
@@ -43,10 +43,10 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     var coordinator: PinboardCoordinator!
     
     /// Injected Properties Initlizaer
-    init(withDataProvider movieListDataProvider: PinboardDataProvider,
-         andCoordinator movieListCoordinator: PinboardCoordinator) {
-        self.dataProvider = movieListDataProvider
-        self.coordinator = movieListCoordinator
+    init(withDataProvider pinboardDataProvider: PinboardDataProvider,
+         andCoordinator pinboardCoordinator: PinboardCoordinator) {
+        self.dataProvider = pinboardDataProvider
+        self.coordinator = pinboardCoordinator
     }
     
     /// Stored Properties
@@ -58,35 +58,35 @@ final class PinboardViewModel: PinboardViewModelProtocol {
             output?(.showFilterImage(show: isFilteringActive))
         }
     }
-    private var allMovieListViewModels = [PinboardTableCellViewModel]() {
+    private var allPinboardViewModels = [PinboardTableCellViewModel]() {
         didSet {
-            output?(.reloadMovies)
+            output?(.reloadPins)
         }
     }
-    private var filteredMovieListViewModels = [PinboardTableCellViewModel]()  {
+    private var filteredPinboardViewModels = [PinboardTableCellViewModel]()  {
         didSet {
-            output?(.reloadMovies)
+            output?(.reloadPins)
         }
     }
     
     /// Computed Properties
-    private var movieDataSourceViewModels: [PinboardTableCellViewModel] {
+    private var pinDataSourceViewModels: [PinboardTableCellViewModel] {
         if isFilteringActive {
-            return filteredMovieListViewModels
+            return filteredPinboardViewModels
         }
-        return allMovieListViewModels
+        return allPinboardViewModels
     }
     
-    var numberOfMovies: Int {
-        return movieDataSourceViewModels.count
+    var numberOfPins: Int {
+        return pinDataSourceViewModels.count
     }
    
     func didLoad() {
-        getUpcomingMovies()
+        getPins()
     }
     
     func tableViewDidReachToEnd() {
-        getUpcomingMovies()
+        getPins()
     }
     
     func didSelectFiltering(with date: Date) {
@@ -104,11 +104,11 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     
     /// View Input Action Methods
     func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel {
-        return movieDataSourceViewModels[index]
+        return pinDataSourceViewModels[index]
     }
     
-    func getUpcomingMovies() {
-        if isFilteringActive == false  { dataProvider.providePaginatedUpcomingMovies() }
+    func getPins() {
+        if isFilteringActive == false  { dataProvider.providePins() }
     }
     
     /// Private Methods
@@ -116,16 +116,16 @@ final class PinboardViewModel: PinboardViewModelProtocol {
         isFilteringActive = true
         output?(.showDatePicker(show: false))
         let dateString = DateFormatter.shortFormatDateFormatter.string(from: date)
-        filteredMovieListViewModels = allMovieListViewModels.filter({ ($0.movie?.releaseDate ?? "") == dateString })
+        filteredPinboardViewModels = allPinboardViewModels.filter({ ($0.pin?.identifier ?? "") == dateString })
     }
 
     private func clearFilter() {
         isFilteringActive = false
-        filteredMovieListViewModels.removeAll()
+        filteredPinboardViewModels.removeAll()
     }
     
     func didSelectPin(index: Int) {
-        coordinator.navigateToMovieDetail(withMovie: getPinboardCellViewModel(index: index).movie)
+        coordinator.navigateToPinDetail(withPin: getPinboardCellViewModel(index: index).pin)
     }
 }
 
@@ -137,9 +137,10 @@ extension PinboardViewModel: PinboardDataProviderDelegate {
         output?(.showActivityIndicator(show: show))
     }
     
-    func onSuccess(_ upcomingMovies: UpcomingMovies) {
-        guard let results = upcomingMovies.results else { return }
-        allMovieListViewModels.append(contentsOf: results.map { PinboardTableCellViewModel.init($0) })
+    func onSuccess(_ pinsArray: [Pin]) {
+        //TODO
+//        guard let results = pinsArray.results else { return }
+//        allPinboardViewModels.append(contentsOf: results.map { PinboardTableCellViewModel.init($0) })
     }
     
     func onFailure(_ error: NetworkError) {

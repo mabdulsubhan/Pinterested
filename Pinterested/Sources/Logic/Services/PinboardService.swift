@@ -9,11 +9,11 @@
 import Foundation
 
 
-typealias UpcomingMovieResponse = (Result<UpcomingMovies,NetworkError>) -> Void
+typealias PinResponse = (Result<[Pin],NetworkError>) -> Void
 
 /// Pinboard Service  Protocol
 protocol PinboardService {
-    func fetchMovies(forPage page: Int, withCompletion: @escaping (UpcomingMovieResponse) )
+    func fetchPins(withCompletion: @escaping (PinResponse) )
 }
 
 /// Pinboard Service  Protocol Implementation
@@ -30,9 +30,9 @@ class PinboardServiceImpl: PinboardService {
     }
     
     /// Method
-    func fetchMovies(forPage page: Int, withCompletion: @escaping (UpcomingMovieResponse) ) {
+    func fetchPins(withCompletion: @escaping (PinResponse) ) {
         
-        let endPoint = Endpoint(method: .get, route: APIConstants.MovieListAPIRoute ,parameters:["api_key": Keys.APIKey,"language": "en-US","page": "\(page)"])
+        let endPoint = Endpoint(method: .get, route: APIConstants.PinBoardAPIRoute ,parameters:nil)
         
         networkManager.request(endPoint) { [weak self] (result) in
            
@@ -41,8 +41,8 @@ class PinboardServiceImpl: PinboardService {
                 do {
                     guard let self = self else { return }
                     
-                    let upcomingMovies: UpcomingMovies = try self.translationLayer.translateToObject(withData: data)
-                    withCompletion(.success(upcomingMovies))
+                    let pinArray: [Pin] = try self.translationLayer.translateToObject(withData: data)
+                    withCompletion(.success(pinArray))
                     
                 } catch {
                     withCompletion(.failure(NetworkError.decoding(error)))

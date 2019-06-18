@@ -29,7 +29,7 @@ class PinboardTableViewCell: UITableViewCell {
     
     /// Methods
     func populateWithViewModel(cellViewModel: PinboardTableCellViewModel) {
-        
+        //TODO
         movieTitle.text = cellViewModel.movieTitleText
         movieReleaseDate.text = cellViewModel.movieReleaseDate 
         movieDescription.attributedText = cellViewModel.movieDescription.addSeeMore(maxLength: 80)

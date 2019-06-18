@@ -48,7 +48,7 @@ class PinboardViewController: UIViewController {
             guard let self = self else { return }
             
             switch output {
-            case .reloadMovies:
+            case .reloadPins:
                 self.pinboardTableview.reloadData()
             case .showActivityIndicator(let show):
             show ? SVProgressHUD.show() : SVProgressHUD.dismiss()

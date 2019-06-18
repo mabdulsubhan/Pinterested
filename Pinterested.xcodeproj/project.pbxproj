@@ -21,8 +21,7 @@
 		0D05654822B7BD7F001032D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653B22B7BD7E001032D8 /* Constants.swift */; };
 		0D05654922B7BD7F001032D8 /* DateTimeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653C22B7BD7E001032D8 /* DateTimeUtility.swift */; };
 		0D05654A22B7BD7F001032D8 /* DatePicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653E22B7BD7F001032D8 /* DatePicketView.swift */; };
-		0D05654B22B7BD7F001032D8 /* UpcomingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654022B7BD7F001032D8 /* UpcomingMovies.swift */; };
-		0D05654C22B7BD7F001032D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654122B7BD7F001032D8 /* Movie.swift */; };
+		0D05654B22B7BD7F001032D8 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654022B7BD7F001032D8 /* Pin.swift */; };
 		0D05655622B7BD99001032D8 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654D22B7BD98001032D8 /* UIStoryboard+Extensions.swift */; };
 		0D05655722B7BD99001032D8 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654E22B7BD98001032D8 /* UIScrollView+Extensions.swift */; };
 		0D05655822B7BD99001032D8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654F22B7BD98001032D8 /* UIView+Extensions.swift */; };
@@ -43,6 +42,8 @@
 		0D05657722B7BDCF001032D8 /* PinboardDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656C22B7BDCF001032D8 /* PinboardDataProvider.swift */; };
 		0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656E22B7BDCF001032D8 /* PinboardCoordinator.swift */; };
 		0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05657A22B7C0AA001032D8 /* SceneFactory.swift */; };
+		0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A722B8FD51002E5FEB /* User.swift */; };
+		0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A922B8FD85002E5FEB /* Links.swift */; };
 		232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC05323195D599DB634710D /* Pods_Pinterested.framework */; };
 		29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */; };
 		3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */; };
@@ -89,8 +90,7 @@
 		0D05653B22B7BD7E001032D8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D05653C22B7BD7E001032D8 /* DateTimeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeUtility.swift; sourceTree = "<group>"; };
 		0D05653E22B7BD7F001032D8 /* DatePicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicketView.swift; sourceTree = "<group>"; };
-		0D05654022B7BD7F001032D8 /* UpcomingMovies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingMovies.swift; sourceTree = "<group>"; };
-		0D05654122B7BD7F001032D8 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0D05654022B7BD7F001032D8 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		0D05654D22B7BD98001032D8 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		0D05654E22B7BD98001032D8 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		0D05654F22B7BD98001032D8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -111,6 +111,8 @@
 		0D05656C22B7BDCF001032D8 /* PinboardDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardDataProvider.swift; sourceTree = "<group>"; };
 		0D05656E22B7BDCF001032D8 /* PinboardCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardCoordinator.swift; sourceTree = "<group>"; };
 		0D05657A22B7C0AA001032D8 /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		0DFFB0A722B8FD51002E5FEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0DFFB0A922B8FD85002E5FEB /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.debug.xcconfig"; sourceTree = "<group>"; };
 		1EC05323195D599DB634710D /* Pods_Pinterested.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterested.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,8 +306,9 @@
 		0D05653F22B7BD7F001032D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0D05654022B7BD7F001032D8 /* UpcomingMovies.swift */,
-				0D05654122B7BD7F001032D8 /* Movie.swift */,
+				0D05654022B7BD7F001032D8 /* Pin.swift */,
+				0DFFB0A722B8FD51002E5FEB /* User.swift */,
+				0DFFB0A922B8FD85002E5FEB /* Links.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -630,14 +633,15 @@
 				0D05654322B7BD7F001032D8 /* NetworkManager.swift in Sources */,
 				0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */,
 				0D05654222B7BD7F001032D8 /* Result.swift in Sources */,
-				0D05654C22B7BD7F001032D8 /* Movie.swift in Sources */,
 				0D05654A22B7BD7F001032D8 /* DatePicketView.swift in Sources */,
 				0D05655B22B7BD99001032D8 /* String+Extensions.swift in Sources */,
 				0D0564FE22B7B4E1001032D8 /* AppDelegate.swift in Sources */,
 				0D05654922B7BD7F001032D8 /* DateTimeUtility.swift in Sources */,
 				0D05657722B7BDCF001032D8 /* PinboardDataProvider.swift in Sources */,
+				0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */,
 				0D05657022B7BDCF001032D8 /* PinboardViewController.swift in Sources */,
 				0D05655922B7BD99001032D8 /* DateFormatter+Extensions.swift in Sources */,
+				0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */,
 				0D05654422B7BD7F001032D8 /* JSONTranslator.swift in Sources */,
 				0D05657522B7BDCF001032D8 /* PinboardTableCellViewModel.swift in Sources */,
 				0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */,
@@ -651,7 +655,7 @@
 				0D05654622B7BD7F001032D8 /* Endpoint.swift in Sources */,
 				0D05657122B7BDCF001032D8 /* PinboardViewController+UITableView.swift in Sources */,
 				0D05654722B7BD7F001032D8 /* PinboardService.swift in Sources */,
-				0D05654B22B7BD7F001032D8 /* UpcomingMovies.swift in Sources */,
+				0D05654B22B7BD7F001032D8 /* Pin.swift in Sources */,
 				0D05655622B7BD99001032D8 /* UIStoryboard+Extensions.swift in Sources */,
 				0D05654522B7BD7F001032D8 /* NetworkError.swift in Sources */,
 				0D05655822B7BD99001032D8 /* UIView+Extensions.swift in Sources */,

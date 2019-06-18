@@ -17,16 +17,17 @@ struct PinboardTableCellViewModel {
     var movieDescription: String
     var moviePosterUrl: String
     var movieReleaseDate: String
-    var movie: Movie?
+    var pin: Pin?
     
-    init(_ movie: Movie?) {
+    init(_ pin: Pin?) {
         
-        self.movie = movie
-        self.movieTitleText = movie?.title ?? ""
-        self.movieDescription = movie?.overview ?? ""
-        self.moviePosterUrl = APIConstants.ImageBaseURL + APIConstants.ImagePreviewSize + (movie?.posterPath ?? "")
+        //TODO
+        self.pin = pin
+        self.movieTitleText = pin?.identifier ?? ""
+        self.movieDescription = pin?.identifier ?? ""
+        self.moviePosterUrl = ""//APIConstants.ImageBaseURL + APIConstants.ImagePreviewSize + (pin?.identifier ?? "")
         
-        let date = DateTimeUtility.getReleaseDateFromString(dateString: movie?.releaseDate ?? "")
+        let date = DateTimeUtility.getReleaseDateFromString(dateString: pin?.identifier ?? "")
         self.movieReleaseDate = DateTimeUtility.convertToLongDateFormat(from: date) ?? ""
     }
     
