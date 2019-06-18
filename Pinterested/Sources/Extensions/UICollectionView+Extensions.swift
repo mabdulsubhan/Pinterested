@@ -1,5 +1,5 @@
 //
-//  UITableView+Extensions.swift
+//  UICollectionView+Extensions.swift
 //  Pinterested
 //
 //  Created by Muhammad Abdul Subhan on 17/06/2019.
@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-public extension UITableView {
+public extension UICollectionView {
     
     /// Method which registers a cellType T with xib name T from bundle
     ///
     /// - Parameters:
     ///   - cellType: Cell custom class
     ///   - bundle: Bundle specifier
-    func register<T: UITableViewCell>(cellType: T.Type, bundle: Bundle = .main) {
+    func register<T: UICollectionViewCell>(cellType: T.Type, bundle: Bundle = .main) {
         let className = String(describing: cellType.self)
         let nib = UINib(nibName: className, bundle: bundle)
-        register(nib, forCellReuseIdentifier: className)
+        register(nib, forCellWithReuseIdentifier: className)
     }
     
     
@@ -27,8 +27,8 @@ public extension UITableView {
     ///
     /// - Parameter indexPath: index path of the current cell
     /// - Returns: Generic cell class
-    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+    func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Unable to Dequeue Reusable Table View Cell")
         }
         return cell
@@ -46,4 +46,4 @@ extension ReusableView {
     }
 }
 
-extension UITableViewCell: ReusableView {}
+extension UICollectionViewCell: ReusableView {}

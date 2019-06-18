@@ -20,21 +20,19 @@
 		0D05654722B7BD7F001032D8 /* PinboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653922B7BD7E001032D8 /* PinboardService.swift */; };
 		0D05654822B7BD7F001032D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653B22B7BD7E001032D8 /* Constants.swift */; };
 		0D05654922B7BD7F001032D8 /* DateTimeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653C22B7BD7E001032D8 /* DateTimeUtility.swift */; };
-		0D05654A22B7BD7F001032D8 /* DatePicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05653E22B7BD7F001032D8 /* DatePicketView.swift */; };
 		0D05654B22B7BD7F001032D8 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654022B7BD7F001032D8 /* Pin.swift */; };
 		0D05655622B7BD99001032D8 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654D22B7BD98001032D8 /* UIStoryboard+Extensions.swift */; };
 		0D05655722B7BD99001032D8 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654E22B7BD98001032D8 /* UIScrollView+Extensions.swift */; };
 		0D05655822B7BD99001032D8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05654F22B7BD98001032D8 /* UIView+Extensions.swift */; };
 		0D05655922B7BD99001032D8 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655022B7BD98001032D8 /* DateFormatter+Extensions.swift */; };
-		0D05655A22B7BD99001032D8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655122B7BD98001032D8 /* UITableView+Extensions.swift */; };
+		0D05655A22B7BD99001032D8 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655122B7BD98001032D8 /* UICollectionView+Extensions.swift */; };
 		0D05655B22B7BD99001032D8 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655222B7BD98001032D8 /* String+Extensions.swift */; };
 		0D05655C22B7BD99001032D8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655322B7BD98001032D8 /* UIAlertViewController+Extension.swift */; };
 		0D05655D22B7BD99001032D8 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655422B7BD98001032D8 /* UIColor+Extensions.swift */; };
 		0D05655E22B7BD99001032D8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05655522B7BD99001032D8 /* UIViewController+Extensions.swift */; };
 		0D05656F22B7BDCF001032D8 /* Pinboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D05656122B7BDCF001032D8 /* Pinboard.storyboard */; };
 		0D05657022B7BDCF001032D8 /* PinboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656222B7BDCF001032D8 /* PinboardViewController.swift */; };
-		0D05657122B7BDCF001032D8 /* PinboardViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656322B7BDCF001032D8 /* PinboardViewController+UITableView.swift */; };
-		0D05657222B7BDCF001032D8 /* PinboardViewController+DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656422B7BDCF001032D8 /* PinboardViewController+DatePickerView.swift */; };
+		0D05657122B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656322B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift */; };
 		0D05657322B7BDCF001032D8 /* PinboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656622B7BDCF001032D8 /* PinboardTableViewCell.swift */; };
 		0D05657422B7BDCF001032D8 /* PinboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D05656722B7BDCF001032D8 /* PinboardTableViewCell.xib */; };
 		0D05657522B7BDCF001032D8 /* PinboardTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */; };
@@ -44,6 +42,9 @@
 		0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05657A22B7C0AA001032D8 /* SceneFactory.swift */; };
 		0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A722B8FD51002E5FEB /* User.swift */; };
 		0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A922B8FD85002E5FEB /* Links.swift */; };
+		0DFFB0AC22B90D98002E5FEB /* PinterestedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */; };
+		0DFFB0AF22B912FB002E5FEB /* PinboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0AD22B912FB002E5FEB /* PinboardCollectionViewCell.swift */; };
+		0DFFB0B022B912FB002E5FEB /* PinboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFFB0AE22B912FB002E5FEB /* PinboardCollectionViewCell.xib */; };
 		232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC05323195D599DB634710D /* Pods_Pinterested.framework */; };
 		29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */; };
 		3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */; };
@@ -89,21 +90,19 @@
 		0D05653922B7BD7E001032D8 /* PinboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardService.swift; sourceTree = "<group>"; };
 		0D05653B22B7BD7E001032D8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D05653C22B7BD7E001032D8 /* DateTimeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeUtility.swift; sourceTree = "<group>"; };
-		0D05653E22B7BD7F001032D8 /* DatePicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicketView.swift; sourceTree = "<group>"; };
 		0D05654022B7BD7F001032D8 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		0D05654D22B7BD98001032D8 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		0D05654E22B7BD98001032D8 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		0D05654F22B7BD98001032D8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0D05655022B7BD98001032D8 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
-		0D05655122B7BD98001032D8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		0D05655122B7BD98001032D8 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		0D05655222B7BD98001032D8 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0D05655322B7BD98001032D8 /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
 		0D05655422B7BD98001032D8 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0D05655522B7BD99001032D8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		0D05656122B7BDCF001032D8 /* Pinboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pinboard.storyboard; sourceTree = "<group>"; };
 		0D05656222B7BDCF001032D8 /* PinboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardViewController.swift; sourceTree = "<group>"; };
-		0D05656322B7BDCF001032D8 /* PinboardViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinboardViewController+UITableView.swift"; sourceTree = "<group>"; };
-		0D05656422B7BDCF001032D8 /* PinboardViewController+DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinboardViewController+DatePickerView.swift"; sourceTree = "<group>"; };
+		0D05656322B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinboardViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		0D05656622B7BDCF001032D8 /* PinboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardTableViewCell.swift; sourceTree = "<group>"; };
 		0D05656722B7BDCF001032D8 /* PinboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinboardTableViewCell.xib; sourceTree = "<group>"; };
 		0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardTableCellViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +112,9 @@
 		0D05657A22B7C0AA001032D8 /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		0DFFB0A722B8FD51002E5FEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DFFB0A922B8FD85002E5FEB /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinterestedCollectionViewLayout.swift; path = /Users/subhan/Pinterested/Pinterested/Sources/Logic/Common/PinterestedCollectionViewLayout.swift; sourceTree = "<absolute>"; };
+		0DFFB0AD22B912FB002E5FEB /* PinboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DFFB0AE22B912FB002E5FEB /* PinboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.debug.xcconfig"; sourceTree = "<group>"; };
 		1EC05323195D599DB634710D /* Pods_Pinterested.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterested.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,7 +226,7 @@
 		0D05652E22B7BD44001032D8 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				0D05653D22B7BD7F001032D8 /* Common Views */,
+				0D05653D22B7BD7F001032D8 /* Common */,
 				0D05653F22B7BD7F001032D8 /* Models */,
 				0D05653222B7BD7E001032D8 /* Networking */,
 				0D05653822B7BD7E001032D8 /* Services */,
@@ -250,7 +252,7 @@
 				0D05655422B7BD98001032D8 /* UIColor+Extensions.swift */,
 				0D05654E22B7BD98001032D8 /* UIScrollView+Extensions.swift */,
 				0D05654D22B7BD98001032D8 /* UIStoryboard+Extensions.swift */,
-				0D05655122B7BD98001032D8 /* UITableView+Extensions.swift */,
+				0D05655122B7BD98001032D8 /* UICollectionView+Extensions.swift */,
 				0D05654F22B7BD98001032D8 /* UIView+Extensions.swift */,
 				0D05655522B7BD99001032D8 /* UIViewController+Extensions.swift */,
 			);
@@ -295,12 +297,12 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		0D05653D22B7BD7F001032D8 /* Common Views */ = {
+		0D05653D22B7BD7F001032D8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0D05653E22B7BD7F001032D8 /* DatePicketView.swift */,
+				0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */,
 			);
-			path = "Common Views";
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0D05653F22B7BD7F001032D8 /* Models */ = {
@@ -328,8 +330,7 @@
 			children = (
 				0D05656122B7BDCF001032D8 /* Pinboard.storyboard */,
 				0D05656222B7BDCF001032D8 /* PinboardViewController.swift */,
-				0D05656322B7BDCF001032D8 /* PinboardViewController+UITableView.swift */,
-				0D05656422B7BDCF001032D8 /* PinboardViewController+DatePickerView.swift */,
+				0D05656322B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift */,
 				0D05656522B7BDCF001032D8 /* TableViewCell */,
 			);
 			path = View;
@@ -341,6 +342,8 @@
 				0D05656622B7BDCF001032D8 /* PinboardTableViewCell.swift */,
 				0D05656722B7BDCF001032D8 /* PinboardTableViewCell.xib */,
 				0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */,
+				0DFFB0AD22B912FB002E5FEB /* PinboardCollectionViewCell.swift */,
+				0DFFB0AE22B912FB002E5FEB /* PinboardCollectionViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				0D05650822B7B4E2001032D8 /* LaunchScreen.storyboard in Resources */,
 				0D05657422B7BDCF001032D8 /* PinboardTableViewCell.xib in Resources */,
 				0D05650522B7B4E2001032D8 /* Assets.xcassets in Resources */,
+				0DFFB0B022B912FB002E5FEB /* PinboardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +637,6 @@
 				0D05654322B7BD7F001032D8 /* NetworkManager.swift in Sources */,
 				0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */,
 				0D05654222B7BD7F001032D8 /* Result.swift in Sources */,
-				0D05654A22B7BD7F001032D8 /* DatePicketView.swift in Sources */,
 				0D05655B22B7BD99001032D8 /* String+Extensions.swift in Sources */,
 				0D0564FE22B7B4E1001032D8 /* AppDelegate.swift in Sources */,
 				0D05654922B7BD7F001032D8 /* DateTimeUtility.swift in Sources */,
@@ -642,18 +645,19 @@
 				0D05657022B7BDCF001032D8 /* PinboardViewController.swift in Sources */,
 				0D05655922B7BD99001032D8 /* DateFormatter+Extensions.swift in Sources */,
 				0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */,
+				0DFFB0AC22B90D98002E5FEB /* PinterestedCollectionViewLayout.swift in Sources */,
 				0D05654422B7BD7F001032D8 /* JSONTranslator.swift in Sources */,
 				0D05657522B7BDCF001032D8 /* PinboardTableCellViewModel.swift in Sources */,
 				0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */,
 				0D05655C22B7BD99001032D8 /* UIAlertViewController+Extension.swift in Sources */,
 				0D05655E22B7BD99001032D8 /* UIViewController+Extensions.swift in Sources */,
-				0D05657222B7BDCF001032D8 /* PinboardViewController+DatePickerView.swift in Sources */,
 				0D05657322B7BDCF001032D8 /* PinboardTableViewCell.swift in Sources */,
-				0D05655A22B7BD99001032D8 /* UITableView+Extensions.swift in Sources */,
+				0D05655A22B7BD99001032D8 /* UICollectionView+Extensions.swift in Sources */,
 				0D05655D22B7BD99001032D8 /* UIColor+Extensions.swift in Sources */,
 				0D05657622B7BDCF001032D8 /* PinboardViewModel.swift in Sources */,
 				0D05654622B7BD7F001032D8 /* Endpoint.swift in Sources */,
-				0D05657122B7BDCF001032D8 /* PinboardViewController+UITableView.swift in Sources */,
+				0D05657122B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift in Sources */,
+				0DFFB0AF22B912FB002E5FEB /* PinboardCollectionViewCell.swift in Sources */,
 				0D05654722B7BD7F001032D8 /* PinboardService.swift in Sources */,
 				0D05654B22B7BD7F001032D8 /* Pin.swift in Sources */,
 				0D05655622B7BD99001032D8 /* UIStoryboard+Extensions.swift in Sources */,

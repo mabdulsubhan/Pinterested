@@ -30,11 +30,11 @@ class PinboardTableViewCell: UITableViewCell {
     /// Methods
     func populateWithViewModel(cellViewModel: PinboardTableCellViewModel) {
         //TODO
-        movieTitle.text = cellViewModel.movieTitleText
-        movieReleaseDate.text = cellViewModel.movieReleaseDate 
-        movieDescription.attributedText = cellViewModel.movieDescription.addSeeMore(maxLength: 80)
-        let url = URL(string: cellViewModel.moviePosterUrl )
-        posterImageView.kf.setImage(with: url)
+//        movieTitle.text = cellViewModel.movieTitleText
+//        movieReleaseDate.text = cellViewModel.movieReleaseDate 
+//        movieDescription.attributedText = cellViewModel.movieDescription.addSeeMore(maxLength: 80)
+//        let url = URL(string: cellViewModel.moviePosterUrl )
+//        posterImageView.kf.setImage(with: url)
     }
 
 }

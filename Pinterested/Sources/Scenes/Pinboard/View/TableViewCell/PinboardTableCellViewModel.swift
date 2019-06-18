@@ -13,22 +13,21 @@ import Foundation
 struct PinboardTableCellViewModel {
     
      /// Properties
-    var movieTitleText: String
-    var movieDescription: String
-    var moviePosterUrl: String
-    var movieReleaseDate: String
-    var pin: Pin?
+    var pin: Pin
+    var thumbImageURL: URL?
+    var imageWidth: Int
+    var imageHeight: Int
     
-    init(_ pin: Pin?) {
+    init(_ pin: Pin) {
         
         //TODO
         self.pin = pin
-        self.movieTitleText = pin?.identifier ?? ""
-        self.movieDescription = pin?.identifier ?? ""
-        self.moviePosterUrl = ""//APIConstants.ImageBaseURL + APIConstants.ImagePreviewSize + (pin?.identifier ?? "")
+        self.imageWidth = pin.width
+        self.imageHeight = pin.height
+        self.thumbImageURL = URL(string: pin.urls.raw + "?w=600")//APIConstants.ImageBaseURL + APIConstants.ImagePreviewSize + (pin?.identifier ?? "")
         
-        let date = DateTimeUtility.getReleaseDateFromString(dateString: pin?.identifier ?? "")
-        self.movieReleaseDate = DateTimeUtility.convertToLongDateFormat(from: date) ?? ""
+//        let date = DateTimeUtility.getReleaseDateFromString(dateString: pin?.identifier ?? "")
+//        self.movieReleaseDate = DateTimeUtility.convertToLongDateFormat(from: date) ?? ""
     }
     
 }

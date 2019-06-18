@@ -6,7 +6,7 @@
 //  Copyright © 2019 Subhan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias PinboardViewModelOutput = (PinboardViewModel.Output) -> ()
 
@@ -18,12 +18,10 @@ protocol PinboardViewModelProtocol {
     var numberOfPins: Int { get }
     var output: PinboardViewModelOutput? { get set }
     func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel
+    func getHeightOfPin(atIndex index: Int) -> CGFloat
     func didSelectPin(index : Int)
     func didLoad()
-    func tableViewDidReachToEnd()
-    func didReset()
-    func didSelectFiltering(with date: Date)
-    func performCTA()
+    func reload()
 }
 
 /// PinboardViewModel Implementation
@@ -33,8 +31,6 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     enum Output {
         case reloadPins
         case showActivityIndicator(show: Bool)
-        case showDatePicker(show: Bool)
-        case showFilterImage(show: Bool)
         case showError(error: Error)
     }
     
@@ -53,17 +49,7 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     var output: PinboardViewModelOutput?
     
     /// Observables Properties
-    var isFilteringActive: Bool = false {
-        didSet {
-            output?(.showFilterImage(show: isFilteringActive))
-        }
-    }
     private var allPinboardViewModels = [PinboardTableCellViewModel]() {
-        didSet {
-            output?(.reloadPins)
-        }
-    }
-    private var filteredPinboardViewModels = [PinboardTableCellViewModel]()  {
         didSet {
             output?(.reloadPins)
         }
@@ -71,9 +57,6 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     
     /// Computed Properties
     private var pinDataSourceViewModels: [PinboardTableCellViewModel] {
-        if isFilteringActive {
-            return filteredPinboardViewModels
-        }
         return allPinboardViewModels
     }
     
@@ -85,45 +68,29 @@ final class PinboardViewModel: PinboardViewModelProtocol {
         getPins()
     }
     
-    func tableViewDidReachToEnd() {
+    func reload() {
         getPins()
     }
-    
-    func didSelectFiltering(with date: Date) {
-        activateFilter(with: date)
-    }
-    
-    func performCTA() {
-        (isFilteringActive) ?  clearFilter() : output?(.showDatePicker(show: true))
-    }
-    
-    func didReset() {
-        output?(.showDatePicker(show: false))
-    }
-    
     
     /// View Input Action Methods
     func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel {
         return pinDataSourceViewModels[index]
     }
     
+    func getHeightOfPin(atIndex index: Int) -> CGFloat {
+        let originalHeight = CGFloat(getPinboardCellViewModel(index: index).imageHeight)
+        let originalWidth = CGFloat(getPinboardCellViewModel(index: index).imageWidth)
+        let ratio = originalHeight/originalWidth
+        let newWidth = UIScreen.main.bounds.maxX/2
+        let newHeight = newWidth * ratio
+        return newHeight
+    }
+    
     func getPins() {
-        if isFilteringActive == false  { dataProvider.providePins() }
+        dataProvider.providePins()
     }
     
     /// Private Methods
-    private func activateFilter(with date: Date) {
-        isFilteringActive = true
-        output?(.showDatePicker(show: false))
-        let dateString = DateFormatter.shortFormatDateFormatter.string(from: date)
-        filteredPinboardViewModels = allPinboardViewModels.filter({ ($0.pin?.identifier ?? "") == dateString })
-    }
-
-    private func clearFilter() {
-        isFilteringActive = false
-        filteredPinboardViewModels.removeAll()
-    }
-    
     func didSelectPin(index: Int) {
         coordinator.navigateToPinDetail(withPin: getPinboardCellViewModel(index: index).pin)
     }
@@ -138,9 +105,7 @@ extension PinboardViewModel: PinboardDataProviderDelegate {
     }
     
     func onSuccess(_ pinsArray: [Pin]) {
-        //TODO
-//        guard let results = pinsArray.results else { return }
-//        allPinboardViewModels.append(contentsOf: results.map { PinboardTableCellViewModel.init($0) })
+        allPinboardViewModels.append(contentsOf: pinsArray.map { PinboardTableCellViewModel.init($0) })
     }
     
     func onFailure(_ error: NetworkError) {

@@ -13,9 +13,7 @@ import SVProgressHUD
 class PinboardViewController: UIViewController {
     
     /// Outlets
-    @IBOutlet weak var rightBarButton: UIBarButtonItem!
-    @IBOutlet weak var pinboardTableview: UITableView!
-    @IBOutlet weak var datePickerView: DatePickerView!
+    @IBOutlet weak var pinboardCollectionView: UICollectionView!
     @IBOutlet var noDataView: UIView!
     
     var datePickerTopConstraint = NSLayoutConstraint()
@@ -29,17 +27,14 @@ class PinboardViewController: UIViewController {
         bindViewModelOutput()
         viewModel.didLoad()
     }
-    
-    /// Outlet Actions
-    @IBAction func onRightBarButtonTapped(_ sender: UIBarButtonItem) {
-        viewModel.performCTA()
-    }
   
     /// Methods
     private func setupUI() {
-        setupDatePickerView()
-        pinboardTableview.register(cellType: PinboardTableViewCell.self)
-        pinboardTableview.backgroundView = noDataView
+        pinboardCollectionView.register(cellType: PinboardCollectionViewCell.self)
+        pinboardCollectionView.backgroundView = noDataView
+        if let layout = pinboardCollectionView?.collectionViewLayout as? PinterestedCollectionViewLayout {
+            layout.delegate = self
+        }
     }
 
     func bindViewModelOutput() {
@@ -49,15 +44,11 @@ class PinboardViewController: UIViewController {
             
             switch output {
             case .reloadPins:
-                self.pinboardTableview.reloadData()
+                self.pinboardCollectionView.reloadData()
             case .showActivityIndicator(let show):
             show ? SVProgressHUD.show() : SVProgressHUD.dismiss()
             case .showError(let error):
                 UIAlertController.showAlert(withMessage: error.localizedDescription)
-            case .showDatePicker(let show):
-                (show) ? self.showDatePicker()  :  self.hideDatePicker()
-            case .showFilterImage(let show):
-                self.rightBarButton.image = show ? UIImage(named: "resetIcon") : UIImage(named: "filterIcon")
             }
         }
     }
