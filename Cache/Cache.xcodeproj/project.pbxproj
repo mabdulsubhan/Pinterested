@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D08493322BA173E00E35A6B /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D08492922BA173E00E35A6B /* Cache.framework */; };
-		0D08493822BA173E00E35A6B /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08493722BA173E00E35A6B /* CacheTests.swift */; };
 		0D08493A22BA173E00E35A6B /* Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D08492C22BA173E00E35A6B /* Cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D08494422BA181300E35A6B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08494322BA181300E35A6B /* CacheManager.swift */; };
 		0D08497022BA9E7800E35A6B /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08496F22BA9E7800E35A6B /* UIImageView+Cache.swift */; };
@@ -19,6 +18,14 @@
 		0D08497D22BBA4B800E35A6B /* String+Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08497C22BBA4B800E35A6B /* String+Cachable.swift */; };
 		0D08497F22BBA77500E35A6B /* CacheConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08497E22BBA77500E35A6B /* CacheConfiguration.swift */; };
 		0D08498122BBA81000E35A6B /* CacheGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498022BBA81000E35A6B /* CacheGlobals.swift */; };
+		0D08498422BBA9D600E35A6B /* CacheConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498322BBA9D600E35A6B /* CacheConfigurationTests.swift */; };
+		0D08498622BBAA7800E35A6B /* StringCachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498522BBAA7800E35A6B /* StringCachableTests.swift */; };
+		0D08498822BBAE7D00E35A6B /* IntCachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498722BBAE7D00E35A6B /* IntCachableTests.swift */; };
+		0D08498A22BBAF2600E35A6B /* ImageCachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498922BBAF2600E35A6B /* ImageCachableTests.swift */; };
+		0D08498C22BBAFDA00E35A6B /* TestImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D08498B22BBAFDA00E35A6B /* TestImage.png */; };
+		0D08498E22BBB01600E35A6B /* TestImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D08498B22BBAFDA00E35A6B /* TestImage.png */; };
+		0D08499022BBB0C300E35A6B /* UIImageViewCachableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08498F22BBB0C300E35A6B /* UIImageViewCachableTests.swift */; };
+		0D08499222BBB1C700E35A6B /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08499122BBB1C700E35A6B /* CacheManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 		0D08492C22BA173E00E35A6B /* Cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
 		0D08492D22BA173E00E35A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D08493222BA173E00E35A6B /* CacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D08493722BA173E00E35A6B /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		0D08493922BA173E00E35A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D08494322BA181300E35A6B /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		0D08496F22BA9E7800E35A6B /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		0D08497C22BBA4B800E35A6B /* String+Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Cachable.swift"; sourceTree = "<group>"; };
 		0D08497E22BBA77500E35A6B /* CacheConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfiguration.swift; sourceTree = "<group>"; };
 		0D08498022BBA81000E35A6B /* CacheGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheGlobals.swift; sourceTree = "<group>"; };
+		0D08498222BBA9D500E35A6B /* CacheTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CacheTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D08498322BBA9D600E35A6B /* CacheConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfigurationTests.swift; sourceTree = "<group>"; };
+		0D08498522BBAA7800E35A6B /* StringCachableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCachableTests.swift; sourceTree = "<group>"; };
+		0D08498722BBAE7D00E35A6B /* IntCachableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntCachableTests.swift; sourceTree = "<group>"; };
+		0D08498922BBAF2600E35A6B /* ImageCachableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachableTests.swift; sourceTree = "<group>"; };
+		0D08498B22BBAFDA00E35A6B /* TestImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestImage.png; sourceTree = "<group>"; };
+		0D08498F22BBB0C300E35A6B /* UIImageViewCachableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCachableTests.swift; sourceTree = "<group>"; };
+		0D08499122BBB1C700E35A6B /* CacheManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +119,9 @@
 		0D08493622BA173E00E35A6B /* CacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D08493722BA173E00E35A6B /* CacheTests.swift */,
-				0D08493922BA173E00E35A6B /* Info.plist */,
+				0D08499322BBB5C700E35A6B /* Tests */,
+				0D08498D22BBAFE000E35A6B /* Test Resources */,
+				0D08499422BBB5D500E35A6B /* Supporting Files */,
 			);
 			path = CacheTests;
 			sourceTree = "<group>";
@@ -127,6 +142,36 @@
 				0D08496F22BA9E7800E35A6B /* UIImageView+Cache.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		0D08498D22BBAFE000E35A6B /* Test Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D08498B22BBAFDA00E35A6B /* TestImage.png */,
+			);
+			path = "Test Resources";
+			sourceTree = "<group>";
+		};
+		0D08499322BBB5C700E35A6B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0D08499122BBB1C700E35A6B /* CacheManagerTests.swift */,
+				0D08498322BBA9D600E35A6B /* CacheConfigurationTests.swift */,
+				0D08498522BBAA7800E35A6B /* StringCachableTests.swift */,
+				0D08498722BBAE7D00E35A6B /* IntCachableTests.swift */,
+				0D08498922BBAF2600E35A6B /* ImageCachableTests.swift */,
+				0D08498F22BBB0C300E35A6B /* UIImageViewCachableTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0D08499422BBB5D500E35A6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D08493922BA173E00E35A6B /* Info.plist */,
+				0D08498222BBA9D500E35A6B /* CacheTests-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +240,7 @@
 					};
 					0D08493122BA173E00E35A6B = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -221,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D08498E22BBB01600E35A6B /* TestImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D08498C22BBAFDA00E35A6B /* TestImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D08493822BA173E00E35A6B /* CacheTests.swift in Sources */,
+				0D08499222BBB1C700E35A6B /* CacheManagerTests.swift in Sources */,
+				0D08499022BBB0C300E35A6B /* UIImageViewCachableTests.swift in Sources */,
+				0D08498A22BBAF2600E35A6B /* ImageCachableTests.swift in Sources */,
+				0D08498822BBAE7D00E35A6B /* IntCachableTests.swift in Sources */,
+				0D08498422BBA9D600E35A6B /* CacheConfigurationTests.swift in Sources */,
+				0D08498622BBAA7800E35A6B /* StringCachableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,6 +511,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhan.CacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CacheTests/CacheTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhan.CacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CacheTests/CacheTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
