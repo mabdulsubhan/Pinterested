@@ -33,11 +33,13 @@
 		0D05656F22B7BDCF001032D8 /* Pinboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D05656122B7BDCF001032D8 /* Pinboard.storyboard */; };
 		0D05657022B7BDCF001032D8 /* PinboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656222B7BDCF001032D8 /* PinboardViewController.swift */; };
 		0D05657122B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656322B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift */; };
-		0D05657522B7BDCF001032D8 /* PinboardTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */; };
+		0D05657522B7BDCF001032D8 /* PinboardCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656822B7BDCF001032D8 /* PinboardCollectionCellViewModel.swift */; };
 		0D05657622B7BDCF001032D8 /* PinboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656A22B7BDCF001032D8 /* PinboardViewModel.swift */; };
 		0D05657722B7BDCF001032D8 /* PinboardDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656C22B7BDCF001032D8 /* PinboardDataProvider.swift */; };
 		0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656E22B7BDCF001032D8 /* PinboardCoordinator.swift */; };
 		0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05657A22B7C0AA001032D8 /* SceneFactory.swift */; };
+		0D08491E22B979F400E35A6B /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D08491D22B979F400E35A6B /* Loader.json */; };
+		0D08496E22BA1AFC00E35A6B /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D08496D22BA1AFC00E35A6B /* Cache.framework */; };
 		0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A722B8FD51002E5FEB /* User.swift */; };
 		0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A922B8FD85002E5FEB /* Links.swift */; };
 		0DFFB0AC22B90D98002E5FEB /* PinterestedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */; };
@@ -47,6 +49,7 @@
 		0DFFB0BB22B950CB002E5FEB /* PinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0B522B950CB002E5FEB /* PinDetailViewModel.swift */; };
 		0DFFB0BC22B950CB002E5FEB /* PinDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFFB0B722B950CB002E5FEB /* PinDetail.storyboard */; };
 		0DFFB0BD22B950CB002E5FEB /* PinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0B822B950CB002E5FEB /* PinDetailViewController.swift */; };
+		0DFFB0C022B96F45002E5FEB /* LottieRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0BF22B96F45002E5FEB /* LottieRefreshControl.swift */; };
 		232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC05323195D599DB634710D /* Pods_Pinterested.framework */; };
 		29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */; };
 		3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */; };
@@ -105,11 +108,13 @@
 		0D05656122B7BDCF001032D8 /* Pinboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pinboard.storyboard; sourceTree = "<group>"; };
 		0D05656222B7BDCF001032D8 /* PinboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardViewController.swift; sourceTree = "<group>"; };
 		0D05656322B7BDCF001032D8 /* PinboardViewController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinboardViewController+UICollectionView.swift"; sourceTree = "<group>"; };
-		0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardTableCellViewModel.swift; sourceTree = "<group>"; };
+		0D05656822B7BDCF001032D8 /* PinboardCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		0D05656A22B7BDCF001032D8 /* PinboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardViewModel.swift; sourceTree = "<group>"; };
 		0D05656C22B7BDCF001032D8 /* PinboardDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardDataProvider.swift; sourceTree = "<group>"; };
 		0D05656E22B7BDCF001032D8 /* PinboardCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinboardCoordinator.swift; sourceTree = "<group>"; };
 		0D05657A22B7C0AA001032D8 /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		0D08491D22B979F400E35A6B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
+		0D08496D22BA1AFC00E35A6B /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFFB0A722B8FD51002E5FEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DFFB0A922B8FD85002E5FEB /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinterestedCollectionViewLayout.swift; path = /Users/subhan/Pinterested/Pinterested/Sources/Logic/Common/PinterestedCollectionViewLayout.swift; sourceTree = "<absolute>"; };
@@ -119,6 +124,7 @@
 		0DFFB0B522B950CB002E5FEB /* PinDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinDetailViewModel.swift; sourceTree = "<group>"; };
 		0DFFB0B722B950CB002E5FEB /* PinDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinDetail.storyboard; sourceTree = "<group>"; };
 		0DFFB0B822B950CB002E5FEB /* PinDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinDetailViewController.swift; sourceTree = "<group>"; };
+		0DFFB0BF22B96F45002E5FEB /* LottieRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRefreshControl.swift; sourceTree = "<group>"; };
 		16C8DBCE077567E940CFD2A7 /* Pods-Pinterested.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.debug.xcconfig"; sourceTree = "<group>"; };
 		1EC05323195D599DB634710D /* Pods_Pinterested.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterested.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C9ABC61EA108B56365AF54 /* Pods-Pinterested.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterested.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D08496E22BA1AFC00E35A6B /* Cache.framework in Frameworks */,
 				232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +227,7 @@
 		0D05652D22B7BD19001032D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DFFB0C122B9706E002E5FEB /* Lottie */,
 				0D05650422B7B4E2001032D8 /* Assets.xcassets */,
 				0D05650622B7B4E2001032D8 /* LaunchScreen.storyboard */,
 				0D05650922B7B4E2001032D8 /* Info.plist */,
@@ -307,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */,
+				0DFFB0BF22B96F45002E5FEB /* LottieRefreshControl.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -345,7 +354,7 @@
 		0D05656522B7BDCF001032D8 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				0D05656822B7BDCF001032D8 /* PinboardTableCellViewModel.swift */,
+				0D05656822B7BDCF001032D8 /* PinboardCollectionCellViewModel.swift */,
 				0DFFB0AD22B912FB002E5FEB /* PinboardCollectionViewCell.swift */,
 				0DFFB0AE22B912FB002E5FEB /* PinboardCollectionViewCell.xib */,
 			);
@@ -411,6 +420,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0DFFB0C122B9706E002E5FEB /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				0D08491D22B979F400E35A6B /* Loader.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		46CD9DDDFA2998BF17DE95A3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +444,7 @@
 		B246FF82A93B4A138F41D6A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D08496D22BA1AFC00E35A6B /* Cache.framework */,
 				1EC05323195D599DB634710D /* Pods_Pinterested.framework */,
 				3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */,
 				0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */,
@@ -544,6 +562,7 @@
 			files = (
 				0D05656F22B7BDCF001032D8 /* Pinboard.storyboard in Resources */,
 				0D05650822B7B4E2001032D8 /* LaunchScreen.storyboard in Resources */,
+				0D08491E22B979F400E35A6B /* Loader.json in Resources */,
 				0D05650522B7B4E2001032D8 /* Assets.xcassets in Resources */,
 				0DFFB0B022B912FB002E5FEB /* PinboardCollectionViewCell.xib in Resources */,
 				0DFFB0BC22B950CB002E5FEB /* PinDetail.storyboard in Resources */,
@@ -643,16 +662,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pinterested/Pods-Pinterested-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -676,11 +693,12 @@
 				0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */,
 				0D05657022B7BDCF001032D8 /* PinboardViewController.swift in Sources */,
 				0DFFB0B222B9351E002E5FEB /* Date+Extensions.swift in Sources */,
+				0DFFB0C022B96F45002E5FEB /* LottieRefreshControl.swift in Sources */,
 				0D05655922B7BD99001032D8 /* DateFormatter+Extensions.swift in Sources */,
 				0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */,
 				0DFFB0AC22B90D98002E5FEB /* PinterestedCollectionViewLayout.swift in Sources */,
 				0D05654422B7BD7F001032D8 /* JSONTranslator.swift in Sources */,
-				0D05657522B7BDCF001032D8 /* PinboardTableCellViewModel.swift in Sources */,
+				0D05657522B7BDCF001032D8 /* PinboardCollectionCellViewModel.swift in Sources */,
 				0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */,
 				0D05655C22B7BD99001032D8 /* UIAlertViewController+Extension.swift in Sources */,
 				0D05655E22B7BD99001032D8 /* UIViewController+Extensions.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+
 /// PinDetailViewController
 class PinDetailViewController: UIViewController {
 
@@ -40,7 +41,8 @@ class PinDetailViewController: UIViewController {
 
             switch output {
             case .showPinImageView(let url):
-                self.imageView.kf.setImage(with: url)
+                self.imageView.downloadImage(url: url)
+                
             }
         }
     }

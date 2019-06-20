@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Kingfisher
 import Hero
+import Cache
 
 class PinboardCollectionViewCell: UICollectionViewCell {
 
@@ -18,21 +18,18 @@ class PinboardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        imageView.layer.cornerRadius = 10
-        imageView.layer.masksToBounds = true
-    }
-    
+        
     override func layoutSubviews() {
         super.layoutSubviews()
-        labelBackView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 10)
-        backView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
+//        labelBackView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 10)
+//        backView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
+//        imageView.layer.cornerRadius = 10
+//        imageView.layer.masksToBounds = true
     }
-    func populateWithViewModel(cellViewModel: PinboardTableCellViewModel) {
+    
+    func populateWithViewModel(cellViewModel: PinboardCollectionCellViewModel) {
         if let url =  cellViewModel.thumbImageURL {
-            imageView.kf.setImage(with: url, placeholder: UIImage(named: "imagePlaceholder"))
+            imageView.downloadImage(url: url, placeholderImage: UIImage(named: "imagePlaceholder"))
         }
         
         nameLabel.text = cellViewModel.username

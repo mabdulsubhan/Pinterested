@@ -38,10 +38,6 @@ extension PinboardViewController: PinterestedCollectionViewLayoutDelegate {
 extension PinboardViewController : UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if scrollView.isAtBottom() {
-            // TODO
-//            viewModel.reload()
-        }
+        refreshControl.updateProgress(with: scrollView.contentOffset.y)
     }
 }

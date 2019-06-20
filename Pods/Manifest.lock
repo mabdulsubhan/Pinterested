@@ -1,24 +1,20 @@
 PODS:
   - Hero (1.4.0)
-  - Kingfisher (5.5.0)
-  - SVProgressHUD (2.2.5)
+  - lottie-ios (3.0.6)
 
 DEPENDENCIES:
   - Hero
-  - Kingfisher (~> 5.0)
-  - SVProgressHUD
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Hero
-    - Kingfisher
-    - SVProgressHUD
+    - lottie-ios
 
 SPEC CHECKSUMS:
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
-  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  lottie-ios: d030b6cda141cfd8bbaa3db89264785e6fdf675a
 
-PODFILE CHECKSUM: 5721f127a1d001b605c6cd9520a2bd837bcfb789
+PODFILE CHECKSUM: f39f2139cfdf34a7136a57e9f29b5abb2a86bff6
 
 COCOAPODS: 1.5.3

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 /// PinboardViewController
 class PinboardViewController: UIViewController {
@@ -17,7 +16,12 @@ class PinboardViewController: UIViewController {
     
     var datePickerTopConstraint = NSLayoutConstraint()
     var viewModel: PinboardViewModelProtocol!
- 
+    lazy var refreshControl: LottieRefreshControl = {
+        let refresher = LottieRefreshControl(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 300))
+        refresher.addTarget(self, action: #selector(reloadView), for: .valueChanged)
+        return refresher
+    }()
+
     
     /// View Life cycle Method
     override func viewDidLoad() {
@@ -34,8 +38,15 @@ class PinboardViewController: UIViewController {
         if let layout = pinboardCollectionView?.collectionViewLayout as? PinterestedCollectionViewLayout {
             layout.delegate = self
         }
+        self.pinboardCollectionView.addSubview(refreshControl)
     }
 
+    @objc
+    func reloadView() {
+        refreshControl.beginRefreshing()
+        viewModel.reload()
+    }
+    
     func bindViewModelOutput() {
         viewModel.output = { [weak self] output in
             
@@ -44,9 +55,12 @@ class PinboardViewController: UIViewController {
             switch output {
             case .reloadPins:
                 self.pinboardCollectionView.reloadData()
+                self.refreshControl.endRefreshing()
             case .showActivityIndicator(let show):
-            show ? SVProgressHUD.show() : SVProgressHUD.dismiss()
+                break
+//                show ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
             case .showError(let error):
+                self.refreshControl.endRefreshing()
                 UIAlertController.showAlert(withMessage: error.localizedDescription)
             }
         }

@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIColor {
-    static let primaryColor = UIColor(red: 58/255, green: 31/255, blue: 88/255, alpha: 1)
+    static let secondaryColor = UIColor(red: 58/255, green: 31/255, blue: 88/255, alpha: 1)
+    static let primaryColor = UIColor.white
 
     convenience init(hex: String) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+import Cache
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        CacheManager.shared.countLimit = 100
         navigateToRootVC()
         setNavBarUI()
         
@@ -26,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setNavBarUI() {
         UINavigationBar.appearance().barStyle = .default
         UINavigationBar.appearance().barTintColor = UIColor.primaryColor
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().tintColor = UIColor.secondaryColor
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.secondaryColor]
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = UIImage()
     }

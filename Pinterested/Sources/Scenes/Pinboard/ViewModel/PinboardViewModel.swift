@@ -17,7 +17,7 @@ protocol PinboardViewModelProtocol {
     var coordinator: PinboardCoordinator! { get }
     var numberOfPins: Int { get }
     var output: PinboardViewModelOutput? { get set }
-    func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel
+    func getPinboardCellViewModel(index : Int) -> PinboardCollectionCellViewModel
     func getHeightOfPin(atIndex index: Int) -> CGFloat
     func didSelectPin(index : Int)
     func didLoad()
@@ -49,14 +49,14 @@ final class PinboardViewModel: PinboardViewModelProtocol {
     var output: PinboardViewModelOutput?
     
     /// Observables Properties
-    private var allPinboardViewModels = [PinboardTableCellViewModel]() {
+    private var allPinboardViewModels = [PinboardCollectionCellViewModel]() {
         didSet {
             output?(.reloadPins)
         }
     }
     
     /// Computed Properties
-    private var pinDataSourceViewModels: [PinboardTableCellViewModel] {
+    private var pinDataSourceViewModels: [PinboardCollectionCellViewModel] {
         return allPinboardViewModels
     }
     
@@ -68,12 +68,13 @@ final class PinboardViewModel: PinboardViewModelProtocol {
         getPins()
     }
     
+    @objc
     func reload() {
         getPins()
     }
     
     /// View Input Action Methods
-    func getPinboardCellViewModel(index : Int) -> PinboardTableCellViewModel {
+    func getPinboardCellViewModel(index : Int) -> PinboardCollectionCellViewModel {
         return pinDataSourceViewModels[index]
     }
     
@@ -105,7 +106,7 @@ extension PinboardViewModel: PinboardDataProviderDelegate {
     }
     
     func onSuccess(_ pinsArray: [Pin]) {
-        allPinboardViewModels.append(contentsOf: pinsArray.map { PinboardTableCellViewModel.init($0) })
+        allPinboardViewModels = pinsArray.map { PinboardCollectionCellViewModel.init($0) }
     }
     
     func onFailure(_ error: NetworkError) {

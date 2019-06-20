@@ -1,9 +1,8 @@
 target 'Pinterested' do
   use_frameworks!
 
-  pod 'Kingfisher', '~> 5.0'
-  pod 'SVProgressHUD'
   pod 'Hero'
+  pod 'lottie-ios'
 
   target 'PinterestedTests' do
     inherit! :search_paths
