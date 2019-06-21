@@ -119,9 +119,10 @@
 		0D08493622BA173E00E35A6B /* CacheTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D08493922BA173E00E35A6B /* Info.plist */,
+				0D08498222BBA9D500E35A6B /* CacheTests-Bridging-Header.h */,
 				0D08499322BBB5C700E35A6B /* Tests */,
 				0D08498D22BBAFE000E35A6B /* Test Resources */,
-				0D08499422BBB5D500E35A6B /* Supporting Files */,
 			);
 			path = CacheTests;
 			sourceTree = "<group>";
@@ -163,15 +164,6 @@
 				0D08498F22BBB0C300E35A6B /* UIImageViewCachableTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		0D08499422BBB5D500E35A6B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0D08493922BA173E00E35A6B /* Info.plist */,
-				0D08498222BBA9D500E35A6B /* CacheTests-Bridging-Header.h */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
