@@ -15,17 +15,14 @@ class PinDetailViewController: UIViewController {
     /// Outlets
     @IBOutlet weak var imageView: UIImageView!
     
-    /// Injected Properties
-    var viewModel: PinDetailViewModel!
-    
+    var pin: Pin?
     
     /// View Lifcycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModelOutput()
-        viewModel.viewDidLoad()
+        showPinImage()
         view.backgroundColor = UIColor.primaryColor
-        imageView.hero.id = viewModel.pinIdentifier
+        imageView.hero.id = pin?.identifier
     }
     
     /// Actions
@@ -34,16 +31,10 @@ class PinDetailViewController: UIViewController {
     }
     
     /// View Binding
-    func bindViewModelOutput() {
-        viewModel.output = { [weak self] output in
-            
-            guard let self = self else { return }
-
-            switch output {
-            case .showPinImageView(let url):
-                self.imageView.downloadImage(url: url)
-                
-            }
+    func showPinImage() {
+        if let pin = pin,
+            let url = URL(string: pin.urls.raw + "?w=1200") {
+            self.imageView.downloadImage(url: url)
         }
     }
 

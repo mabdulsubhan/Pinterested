@@ -10,10 +10,8 @@ import Foundation
 
 /// Delegates Protocol
 protocol PinboardDataProviderDelegate: class {
-    
     func onSuccess(_ pinArray: [Pin])
     func onFailure(_ error: NetworkError)
-    func showLoader(show: Bool)
 }
 
 
@@ -42,13 +40,11 @@ class PinboardDataProvider: PinboardDataProviderProtocol {
         if isFetching == false {
 
             isFetching = true
-            delegate?.showLoader(show: isFetching)
             pinboardService.fetchPins() { [weak self] (result) in
                 
                 guard let self = self else { return }
         
                 self.isFetching = false
-                self.delegate?.showLoader(show: self.isFetching)
                 
                 switch result {
                     

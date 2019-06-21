@@ -28,6 +28,5 @@ extension PinboardCoordinator {
     func navigateToPinDetail(withPin pin: Pin?) {
         let detailController = SceneFactory.shared().getScene(sceneType: .PinDetail, withPin: pin)
         view?.present(detailController, animated: true)
-        // view?.navigationController?.pushViewController(detailController, animated: true)
     }
 }

@@ -14,21 +14,36 @@ class PinboardViewController: UIViewController {
     /// Outlets
     @IBOutlet weak var pinboardCollectionView: UICollectionView!
     
-    var datePickerTopConstraint = NSLayoutConstraint()
-    var viewModel: PinboardViewModelProtocol!
+    lazy var dataProvider: PinboardDataProvider = {
+       let provider = PinboardDataProvider()
+        provider.pinboardService = PinboardService()
+        provider.delegate = self
+        return provider
+    }()
+
+    lazy var coordinator: PinboardCoordinator = {
+        let coor = PinboardCoordinator(view: self)
+        return coor
+    }()
+    
     lazy var refreshControl: LottieRefreshControl = {
         let refresher = LottieRefreshControl(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 300))
         refresher.addTarget(self, action: #selector(reloadView), for: .valueChanged)
         return refresher
     }()
 
-    
+    var allPinboardViewModels = [PinboardCollectionCellViewModel]() {
+        didSet {
+            self.pinboardCollectionView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+    }
+
     /// View Life cycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        bindViewModelOutput()
-        viewModel.didLoad()
+        getPins()
     }
   
     /// Methods
@@ -44,25 +59,23 @@ class PinboardViewController: UIViewController {
     @objc
     func reloadView() {
         refreshControl.beginRefreshing()
-        viewModel.reload()
+        getPins()
     }
     
-    func bindViewModelOutput() {
-        viewModel.output = { [weak self] output in
-            
-            guard let self = self else { return }
-            
-            switch output {
-            case .reloadPins:
-                self.pinboardCollectionView.reloadData()
-                self.refreshControl.endRefreshing()
-            case .showActivityIndicator(let show):
-                break
-//                show ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
-            case .showError(let error):
-                self.refreshControl.endRefreshing()
-                UIAlertController.showAlert(withMessage: error.localizedDescription)
-            }
-        }
+    private func getPins() {
+        dataProvider.providePins()
     }
+}
+
+extension PinboardViewController: PinboardDataProviderDelegate {
+
+    func onSuccess(_ pinArray: [Pin]) {
+        allPinboardViewModels = pinArray.map { PinboardCollectionCellViewModel.init($0) }
+    }
+    
+    func onFailure(_ error: NetworkError) {
+        self.refreshControl.endRefreshing()
+        UIAlertController.showAlert(withMessage: error.localizedDescription)
+    }
+
 }

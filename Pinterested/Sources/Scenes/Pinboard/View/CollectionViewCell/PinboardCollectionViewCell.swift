@@ -19,14 +19,6 @@ class PinboardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
         
-    override func layoutSubviews() {
-        super.layoutSubviews()
-//        labelBackView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 10)
-//        backView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
-//        imageView.layer.cornerRadius = 10
-//        imageView.layer.masksToBounds = true
-    }
-    
     func populateWithViewModel(cellViewModel: PinboardCollectionCellViewModel) {
         if let url =  cellViewModel.thumbImageURL {
             imageView.downloadImage(url: url, placeholderImage: UIImage(named: "imagePlaceholder"))

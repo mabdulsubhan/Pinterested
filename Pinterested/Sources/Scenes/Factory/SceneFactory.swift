@@ -34,19 +34,8 @@ class SceneFactory {
     ///
     /// - Returns: PinboardViewController
     private func getPinboardScene() -> PinboardViewController {
-        
         let storyboard = UIStoryboard(name: UIStoryboard.Name.Pinboard.rawValue, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: UIViewController.Name.Pinboard.rawValue) as! PinboardViewController
-        
-        let dataProvider = PinboardDataProvider()
-        dataProvider.pinboardService = PinboardService()
-        let coordinator = PinboardCoordinator(view: viewController)
-        
-        let viewModel = PinboardViewModel(withDataProvider: dataProvider, andCoordinator: coordinator)
-        
-        dataProvider.delegate = viewModel
-        viewModel.dataProvider = dataProvider
-        viewController.viewModel = viewModel
         return viewController
     }
 
@@ -57,8 +46,7 @@ class SceneFactory {
         
         let storyboard = UIStoryboard(name: UIStoryboard.Name.PinDetail.rawValue, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: UIViewController.Name.PinDetail.rawValue) as! PinDetailViewController
-        let viewModel = PinDetailViewModel(pin)
-        viewController.viewModel = viewModel
+        viewController.pin = pin
         
         return viewController
     }

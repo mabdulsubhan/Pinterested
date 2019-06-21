@@ -23,7 +23,6 @@ struct PinboardCollectionCellViewModel {
     
     init(_ pin: Pin) {
         
-        //TODO
         self.pin = pin
         self.imageWidth = pin.width
         self.imageHeight = pin.height

@@ -11,26 +11,31 @@ import UIKit
 extension PinboardViewController : UICollectionViewDelegate , UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfPins
+        return allPinboardViewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let pinboardCell: PinboardCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let cellViewModel = viewModel.getPinboardCellViewModel(index: indexPath.row)
+        let cellViewModel = allPinboardViewModels[indexPath.row]
         pinboardCell.populateWithViewModel(cellViewModel: cellViewModel)
         return pinboardCell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectPin(index: indexPath.row)
+        coordinator.navigateToPinDetail(withPin: allPinboardViewModels[indexPath.row].pin)
     }
 }
 
 extension PinboardViewController: PinterestedCollectionViewLayoutDelegate {
     
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-        return viewModel.getHeightOfPin(atIndex: indexPath.row)
+        let originalHeight = CGFloat(allPinboardViewModels[indexPath.row].imageHeight)
+        let originalWidth = CGFloat(allPinboardViewModels[indexPath.row].imageWidth)
+        let ratio = originalHeight/originalWidth
+        let newWidth = UIScreen.main.bounds.maxX/2
+        let newHeight = newWidth * ratio
+        return newHeight * 2.5
     }
     
 }
