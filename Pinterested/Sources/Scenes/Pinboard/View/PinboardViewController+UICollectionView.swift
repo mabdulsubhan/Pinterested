@@ -44,5 +44,11 @@ extension PinboardViewController : UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         refreshControl.updateProgress(with: scrollView.contentOffset.y)
+        
+        if scrollView.isAtBottom() {
+            // This can be used to further call the API
+            // But -> TODO: Keep page numbers (since they are not in the API as of now, i'm omitting it)
+            // getPins()
+        }
     }
 }

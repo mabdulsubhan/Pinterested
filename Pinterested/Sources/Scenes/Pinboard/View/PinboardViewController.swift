@@ -14,7 +14,7 @@ class PinboardViewController: UIViewController {
     /// Outlets
     @IBOutlet weak var pinboardCollectionView: UICollectionView!
     
-    lazy var dataProvider: PinboardDataProvider = {
+    private lazy var dataProvider: PinboardDataProvider = {
        let provider = PinboardDataProvider()
         provider.pinboardService = PinboardService()
         provider.delegate = self
@@ -62,7 +62,7 @@ class PinboardViewController: UIViewController {
         getPins()
     }
     
-    private func getPins() {
+    func getPins() {
         dataProvider.providePins()
     }
 }
