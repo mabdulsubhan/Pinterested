@@ -20,6 +20,7 @@ class PinDetailViewController: UIViewController {
     /// View Lifcycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.accessibilityIdentifier = "PinDetailImageView"
         showPinImage()
         view.backgroundColor = UIColor.primaryColor
         imageView.hero.id = pin?.identifier

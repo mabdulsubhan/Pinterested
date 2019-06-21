@@ -34,7 +34,8 @@
 		0D05657822B7BDCF001032D8 /* PinboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05656E22B7BDCF001032D8 /* PinboardCoordinator.swift */; };
 		0D05657B22B7C0AA001032D8 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05657A22B7C0AA001032D8 /* SceneFactory.swift */; };
 		0D08491E22B979F400E35A6B /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D08491D22B979F400E35A6B /* Loader.json */; };
-		0D08496E22BA1AFC00E35A6B /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D08496D22BA1AFC00E35A6B /* Cache.framework */; };
+		0DBC78ED22BD07CC00D54610 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBC78EC22BD07CC00D54610 /* Pods_PinterestedUITests.framework */; };
+		0DBC78F022BD07F100D54610 /* Cache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBC78EE22BD07F100D54610 /* Cache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DFFB0A822B8FD51002E5FEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A722B8FD51002E5FEB /* User.swift */; };
 		0DFFB0AA22B8FD85002E5FEB /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0A922B8FD85002E5FEB /* Links.swift */; };
 		0DFFB0AC22B90D98002E5FEB /* PinterestedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */; };
@@ -46,7 +47,6 @@
 		0DFFB0C022B96F45002E5FEB /* LottieRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFFB0BF22B96F45002E5FEB /* LottieRefreshControl.swift */; };
 		232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC05323195D599DB634710D /* Pods_Pinterested.framework */; };
 		29B71FFAAA108F29712A02A6 /* Pods_PinterestedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */; };
-		3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAF8698FE96D82483109A6 /* Pods_PinterestedUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,20 @@
 			remoteInfo = Pinterested;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DBC78F122BD07F100D54610 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0DBC78F022BD07F100D54610 /* Cache.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0557CD208D6E167692D88A10 /* Pods-PinterestedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestedTests/Pods-PinterestedTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +118,9 @@
 		0D05657A22B7C0AA001032D8 /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		0D08491D22B979F400E35A6B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
 		0D08496D22BA1AFC00E35A6B /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DBC78EA22BD07B300D54610 /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DBC78EC22BD07CC00D54610 /* Pods_PinterestedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PinterestedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DBC78EE22BD07F100D54610 /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFFB0A722B8FD51002E5FEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DFFB0A922B8FD85002E5FEB /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		0DFFB0AB22B90D97002E5FEB /* PinterestedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinterestedCollectionViewLayout.swift; path = /Users/subhan/Pinterested/Pinterested/Sources/Logic/Common/PinterestedCollectionViewLayout.swift; sourceTree = "<absolute>"; };
@@ -127,7 +144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D08496E22BA1AFC00E35A6B /* Cache.framework in Frameworks */,
 				232A8EA217FEC9BE0FAC559F /* Pods_Pinterested.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D038BE35EA640DEDBEF1050 /* Pods_PinterestedUITests.framework in Frameworks */,
+				0DBC78ED22BD07CC00D54610 /* Pods_PinterestedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +170,7 @@
 		0D0564F122B7B4E1001032D8 = {
 			isa = PBXGroup;
 			children = (
+				0DBC78EE22BD07F100D54610 /* Cache.framework */,
 				0D05652B22B7BCB2001032D8 /* README.md */,
 				0D0564FC22B7B4E1001032D8 /* Pinterested */,
 				0D05651122B7B4E2001032D8 /* PinterestedTests */,
@@ -410,6 +427,8 @@
 		B246FF82A93B4A138F41D6A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DBC78EC22BD07CC00D54610 /* Pods_PinterestedUITests.framework */,
+				0DBC78EA22BD07B300D54610 /* Cache.framework */,
 				0D08496D22BA1AFC00E35A6B /* Cache.framework */,
 				1EC05323195D599DB634710D /* Pods_Pinterested.framework */,
 				3A5A739C8C128FA29CCE074D /* Pods_PinterestedTests.framework */,
@@ -430,6 +449,7 @@
 				0D0564F722B7B4E1001032D8 /* Frameworks */,
 				0D0564F822B7B4E1001032D8 /* Resources */,
 				DEF86FAFC55470F9858A9B8C /* [CP] Embed Pods Frameworks */,
+				0DBC78F122BD07F100D54610 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

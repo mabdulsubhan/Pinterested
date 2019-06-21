@@ -28,6 +28,7 @@ class PinboardCollectionViewCell: UICollectionViewCell {
         timeLabel.text = cellViewModel.time
         imageView.hero.id = cellViewModel.pinIdentifier
         backView.backgroundColor = cellViewModel.color
+        accessibilityIdentifier = "\(cellViewModel.pinIdentifier)"
     }
 
 }
